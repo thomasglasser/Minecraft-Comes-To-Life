@@ -30,8 +30,7 @@ jobs:
     needs: call-build-workflow
     runs-on: ubuntu-latest
     env:
-      # Replace with GitHub name
-      changelog: '**Full Changelog**: https://github.com/thomasglasser/NeoForge-Template/compare/'
+      changelog: '**Full Changelog**: https://github.com/thomasglasser/Minecraft-Comes-To-Life/compare/'
     permissions:
       contents: write
     strategy:
@@ -44,8 +43,7 @@ jobs:
         uses: actions/download-artifact@v4
         continue-on-error: false
         with:
-          # Replace with mod name
-          name: NeoForge Template
+          name: Minecraft Comes To Life
           path: build/libs
 
       - name: Checking and setting the environment

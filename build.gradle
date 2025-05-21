@@ -99,7 +99,7 @@ neoForge {
 	}
 
 	mods {
-		neoforgetemplate {
+		minecraftcomestolife {
 			sourceSet sourceSets.main
 		}
 	}
