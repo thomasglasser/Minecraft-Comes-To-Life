@@ -1,0 +1,38 @@
+modLoader="javafml"
+loaderVersion="[${major_fml_version},)"
+license="${license}"
+issueTrackerURL="https://github.com/thomasglasser/${github_name}/issues"
+[[mods]]
+modId="${mod_id}"
+version="${version}"
+displayName="${mod_name}"
+updateJSONURL = "https://api.modrinth.com/updates/${mod_id}/forge_updates.json?neoforge=include"
+displayURL="https://github.com/thomasglasser/${github_name}/wiki"
+logoFile="${icon}"
+credits="${contributors}"
+authors="${mod_author}"
+description='''
+${description}
+'''
+[[mixins]]
+config = "${mod_id}.mixins.json"
+[mc-publish]
+loaders = ['neoforge']
+[[dependencies.${mod_id}]]
+modId="neoforge"
+type="required"
+versionRange="[${neoforge_version},)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.${mod_id}]]
+modId="minecraft"
+type="required"
+versionRange="[${minecraft_version},${next_minecraft_version})"
+ordering="NONE"
+side="BOTH"
+[[dependencies.${mod_id}]]
+modId="tommylib"
+type="required"
+versionRange="[${tommylib_version},)"
+ordering="NONE"
+side="BOTH"
